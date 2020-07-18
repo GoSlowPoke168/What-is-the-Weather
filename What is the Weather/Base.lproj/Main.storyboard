@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,83 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="What_is_the_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weatherBackground.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="i3d-0j-3JG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMj-ap-BET">
+                                <rect key="frame" x="20" y="94" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a City:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D1-Sj-9GL">
+                                <rect key="frame" x="20" y="150" width="374" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E.g. London, San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJ1-ew-vYi">
+                                <rect key="frame" x="20" y="209" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N26-55-wln">
+                                <rect key="frame" x="182.5" y="270" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNm-IE-2eI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-RY-3sB">
+                                <rect key="frame" x="20" y="321" width="374" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="pID-m8-ME6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dMj-ap-BET" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AO5-8a-bGz"/>
+                            <constraint firstItem="N26-55-wln" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cph-BO-rAQ"/>
+                            <constraint firstItem="7D1-Sj-9GL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F2v-CM-nKn"/>
+                            <constraint firstItem="i3d-0j-3JG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FBm-KP-bct"/>
+                            <constraint firstItem="dMj-ap-BET" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="FGU-Qs-8QT"/>
+                            <constraint firstItem="pbS-RY-3sB" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.903382" id="Ia3-gd-PPU"/>
+                            <constraint firstItem="7D1-Sj-9GL" firstAttribute="top" secondItem="dMj-ap-BET" secondAttribute="bottom" constant="20" id="IsU-Xd-p24"/>
+                            <constraint firstItem="aJ1-ew-vYi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Phd-QI-dbN"/>
+                            <constraint firstItem="aJ1-ew-vYi" firstAttribute="top" secondItem="7D1-Sj-9GL" secondAttribute="bottom" constant="31" id="R7N-0E-eUP"/>
+                            <constraint firstItem="N26-55-wln" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.118357" id="UGC-MY-aVe"/>
+                            <constraint firstItem="pbS-RY-3sB" firstAttribute="top" secondItem="N26-55-wln" secondAttribute="bottom" constant="21" id="XRI-hG-GgS"/>
+                            <constraint firstItem="i3d-0j-3JG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YmQ-eT-QTd"/>
+                            <constraint firstItem="N26-55-wln" firstAttribute="top" secondItem="aJ1-ew-vYi" secondAttribute="bottom" constant="27" id="dkd-46-0C9"/>
+                            <constraint firstItem="aJ1-ew-vYi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="mnV-Wn-7HJ"/>
+                            <constraint firstItem="pbS-RY-3sB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p6J-Au-aZR"/>
+                            <constraint firstAttribute="bottom" secondItem="i3d-0j-3JG" secondAttribute="bottom" id="qsF-Ot-kbU"/>
+                            <constraint firstItem="i3d-0j-3JG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sDu-3t-vpQ"/>
+                            <constraint firstItem="dMj-ap-BET" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sMc-tP-nEQ"/>
+                            <constraint firstItem="7D1-Sj-9GL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="zCG-fZ-tqi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="pbS-RY-3sB" id="qdp-Kc-slx"/>
+                        <outlet property="textField" destination="aJ1-ew-vYi" id="fS1-8u-olM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="weatherBackground.jpg" width="1000" height="1500"/>
+    </resources>
 </document>

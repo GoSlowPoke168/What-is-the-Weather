@@ -15,6 +15,7 @@
 		3F7572CC24C2A09E001AD2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7572CA24C2A09E001AD2BC /* LaunchScreen.storyboard */; };
 		3F7572D724C2A09E001AD2BC /* What_is_the_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7572D624C2A09E001AD2BC /* What_is_the_WeatherTests.swift */; };
 		3F7572E224C2A09E001AD2BC /* What_is_the_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7572E124C2A09E001AD2BC /* What_is_the_WeatherUITests.swift */; };
+		3F7572F024C2A0AF001AD2BC /* weatherBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F7572EF24C2A0AF001AD2BC /* weatherBackground.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F7572DD24C2A09E001AD2BC /* What is the WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What is the WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7572E124C2A09E001AD2BC /* What_is_the_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_is_the_WeatherUITests.swift; sourceTree = "<group>"; };
 		3F7572E324C2A09E001AD2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7572EF24C2A0AF001AD2BC /* weatherBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weatherBackground.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				3F7572C824C2A09E001AD2BC /* Assets.xcassets */,
 				3F7572CA24C2A09E001AD2BC /* LaunchScreen.storyboard */,
 				3F7572CD24C2A09E001AD2BC /* Info.plist */,
+				3F7572EF24C2A0AF001AD2BC /* weatherBackground.jpg */,
 			);
 			path = "What is the Weather";
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7572F024C2A0AF001AD2BC /* weatherBackground.jpg in Resources */,
 				3F7572CC24C2A09E001AD2BC /* LaunchScreen.storyboard in Resources */,
 				3F7572C924C2A09E001AD2BC /* Assets.xcassets in Resources */,
 				3F7572C724C2A09D001AD2BC /* Main.storyboard in Resources */,
